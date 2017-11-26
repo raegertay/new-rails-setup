@@ -75,6 +75,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 # app/assets/stylesheets/application.scss
 # Remove all the *= require and *= require_tree
 @import "bootstrap";
+@import "/*";
 ```
 
 #### [jQuery](https://github.com/rails/jquery-rails)
