@@ -13,12 +13,12 @@ bundle install
 ```
 ## Gems Installation
 
-#### Slim Template
+#### [Slim Template](https://github.com/slim-template/slim-rails)
 ```ruby
 gem "slim-rails"
 ```
 
-#### RSpecs
+#### [RSpecs](https://github.com/rspec/rspec-rails)
 ```ruby
 # group :development, :test
 gem 'rspec-rails', '~> 3.6'
@@ -30,7 +30,7 @@ rails generate rspec:install
 rspec
 ```
 
-#### Shoulda Matchers
+#### [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 ```ruby
 # group :development, :test
 gem 'shoulda-matchers', '~> 3.1'
@@ -50,7 +50,7 @@ bundle
 rspec
 ```
 
-#### Factory Bot Rails
+#### [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails)
 ```ruby
 # group :development, :test
 gem 'factory_bot_rails'
@@ -67,7 +67,7 @@ bundle
 rspec
 ```
 
-#### Bootstrap
+#### [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
 ```ruby
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 ```
@@ -77,7 +77,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 @import "bootstrap";
 ```
 
-#### jQuery
+#### [jQuery](https://github.com/rails/jquery-rails)
 ```ruby
 gem 'jquery-rails'
 ```
@@ -88,7 +88,7 @@ gem 'jquery-rails'
 //= require bootstrap-sprockets
 ```
 
-#### Simple Form
+#### [Simple Form](https://github.com/plataformatec/simple_form)
 ```ruby
 gem 'simple_form'
 ```
@@ -98,7 +98,7 @@ bundle
 rails generate simple_form:install --bootstrap #bootstrap option is optional
 ```
 
-#### Devise
+#### [Devise](https://github.com/plataformatec/devise)
 ```ruby
 gem 'devise'
 ```
@@ -121,7 +121,7 @@ rails generate devise:views <resources> # for multiple models
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-##### Devise RSpecs
+##### [Devise RSpecs](https://github.com/plataformatec/devise)
 ```ruby
 # rails_helper.rb
 RSpec.configure do |config|
@@ -130,7 +130,7 @@ RSpec.configure do |config|
 end
 ```
 
-#### dotenv
+#### [dotenv](https://github.com/bkeepers/dotenv)
 ```ruby
 # group :development, :test
 gem 'dotenv-rails'
@@ -145,7 +145,7 @@ touch .env
 .env
 ```
 
-#### OmniAuth - Facebook
+#### [OmniAuth - Facebook](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview)
 ```ruby
 gem 'omniauth-facebook'
 ```
@@ -213,7 +213,7 @@ devise_scope :user do
 end
 ```
 
-#### Mailer
+#### [Mailer](http://culttt.com/2016/03/02/getting-started-with-action-mailer-in-ruby-on-rails/)
 ```bash
 # Terminal
 rails generate mailer UserMailer
@@ -225,4 +225,17 @@ class ApplicationMailer < ActionMailer::Base
   layout "mailer"
 end
 ```
+[Official guide](http://guides.rubyonrails.org/action_mailer_basics.html)
+
+#### [MailCatcher](https://mailcatcher.me/)
+```ruby
+gem 'mailcatcher'
+```
+```ruby
+# environments/development.rb
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+```
+Go to http://localhost:1080/
+
 
