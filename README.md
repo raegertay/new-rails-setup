@@ -9,17 +9,26 @@ rails new <project name> --database=postgresql -T
 cd <project name>
 rvm gemset create <gemset name>
 rvm gemset use <gemset name>
-touch .ruby-version #2.4.1
-touch .ruby-gemset #<gemset name>
+touch .ruby-version
+touch .ruby-gemset
 bundle install
 ```
+```
+# .ruby-version
+2.4.1
+```
+```
+# .ruby-gemset
+<gemset name>
+```
+
 ## Gems Installation
 
 Instructions:
 1. You may skip any gem that is not required.
-2. Please run 'bundle install' after each gem added in gemfile, even if not stated explicitly.
-3. Recommended to commit after each gem installation.
-4. Below is my preferred order for installation. You can install in any order, but beware of the consequences.
+2. Please run 'bundle' after each gem added in gemfile, even if not stated explicitly.
+3. Highly recommend to commit after each gem installation.
+4. Below is my preferred order of installation. You can install in any order, but be mindful of the interactions between gems (e.g Devise and Simple Form)
 
 #### [Slim Template](https://github.com/slim-template/slim-rails)
 ```ruby
@@ -169,6 +178,11 @@ rake db:migrate
 config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"]
 ```
 ```ruby
+# .env
+APP_ID = <your app id>
+APP_SECRET = <your app secret>
+```
+```ruby
 # app/models/user.rb
 devise :omniauthable, :omniauth_providers => [:facebook]
 ```
@@ -251,4 +265,25 @@ mailcatcher
 ```
 Go to http://localhost:1080/
 
-
+#### [Filestack](https://github.com/filestack/filestack-rails)
+```ruby
+gem 'filestack-rails', '~> 3.1.0'
+```
+```bash
+# Terminal
+bundle
+```
+```html
+<!-- After <%= csrf_meta_tags %> -->
+<%= filestack_js_include_tag %>
+<%= filestack_js_init_tag %>
+<!-- Before other scripts -->
+```
+```ruby
+# config/application.rb
+config.filestack_rails.api_key = ENV['FILESTACK_KEY']
+```
+```ruby
+# .env
+FILESTACK_KEY = <your filestack key>
+```
