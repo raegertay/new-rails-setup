@@ -1,6 +1,8 @@
 Setup for New Ruby on Rails Project
 =
 
+*Disclaimer: The following guide has not been tested extensively. Please use it at your own risk!*
+
 ## Create Rails Project
 ```bash
 rails new <project name> --database=postgresql -T
@@ -12,6 +14,12 @@ touch .ruby-gemset #<gemset name>
 bundle install
 ```
 ## Gems Installation
+
+Instructions:
+1. You may skip any gem that is not required.
+2. Please run 'bundle install' after each gem added in gemfile, even if not stated explicitly.
+3. Recommended to commit after each gem installation.
+4. Below is my preferred order for installation. You can install in any order, but beware of the consequences.
 
 #### [Slim Template](https://github.com/slim-template/slim-rails)
 ```ruby
@@ -236,6 +244,10 @@ gem 'mailcatcher'
 # environments/development.rb
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+```
+```bash
+# Terminal
+mailcatcher
 ```
 Go to http://localhost:1080/
 
