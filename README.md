@@ -235,12 +235,6 @@ def self.from_omniauth(auth)
   end
 end
 ```
-```ruby
-# config/routes.rb
-devise_scope :user do
-  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-end
-```
 
 #### [Mailer](http://culttt.com/2016/03/02/getting-started-with-action-mailer-in-ruby-on-rails/)
 ```bash
