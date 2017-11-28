@@ -84,6 +84,12 @@ bundle
 rspec
 ```
 
+#### [Rails-Controller-Testing](https://github.com/rails/rails-controller-testing)
+```ruby
+# For 'assigns' to work
+gem 'rails-controller-testing'
+```
+
 #### [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
 ```ruby
 gem 'bootstrap', '~> 4.0.0.beta2.1'
