@@ -38,7 +38,7 @@ gem "slim-rails"
 #### [RSpecs](https://github.com/rspec/rspec-rails)
 ```ruby
 # group :development, :test
-gem 'rspec-rails', '~> 3.6'
+gem 'rspec-rails', '~> 3.7'
 ```
 ```bash
 # Terminal
@@ -92,7 +92,7 @@ gem 'rails-controller-testing'
 
 #### [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
 ```ruby
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap', '~> 4.0.0'
 ```
 ```scss
 # app/assets/stylesheets/application.scss
